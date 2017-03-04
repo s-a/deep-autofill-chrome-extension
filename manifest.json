@@ -1,0 +1,32 @@
+{
+  "name": "Deep Auto Fill Chrome",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "This chrome extension fills out forms automatically. It aims to make life for developers easier...",
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "browser_action": {
+    "default_icon": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["jquery-1.8.2.min.js", "faker.js", "run.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "background": { "page": "background.html" },
+	"permissions": [
+    "activeTab",
+    "notifications",
+		"contextMenus",
+    "storage"
+	],
+  "homepage_url": "https://github.com/s-a/deep-auto-fill-chrome"
+}

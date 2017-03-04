@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Pagefor Deep Auto Fill Chrome</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" />
+	<style> 
+		input, select{
+			width: 20%;
+			margin: 3px;
+		}
+		textarea{
+			width: 80%;
+			margin: 3px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Deep Auto Fill Chrome - Test page</h1>
+	<input type="text" name="textbox1">
+	<input type="text" id="textbox2">
+	<input type="text" name="textbox3" id="textbox4">
+	<input type="text">
+	<select id="dropdown">
+		<option value="A#">A#</option>
+		<option value="A+">A+</option>
+		<option value="ABAP">ABAP</option>
+		<option value="Action">Action</option>
+		<option value="ActionScript">ActionScript</option>
+		<option value="Active Oberon">Active Oberon</option>
+		<option value="ACUCOBOL">ACUCOBOL</option>
+		<option value="Ada">Ada</option>
+		<option value="ADbasic">ADbasic</option>
+		<option value="Adenine">Adenine</option>
+		<option value="Agilent VEE">Agilent VEE</option>
+		<option value="AIMMS">AIMMS</option>
+		<option value="Aldor">Aldor</option>
+		<option value="Alef">Alef</option>
+		<option value="Aleph">Aleph</option>
+		<option value="ALGOL (ALGOL 60, ALGOL W, ALGOL 68)">ALGOL (ALGOL 60, ALGOL W, ALGOL 68)</option>
+		<option value="Alice">Alice</option>
+		<option value="AML">AML</option>
+		<option value="AmigaBASIC">AmigaBASIC</option>
+		<option value="AMOS BASIC">AMOS BASIC</option>
+		<option value="AMPL">AMPL</option>
+		<option value="AngelScript">AngelScript</option>
+		<option value="ANSYS Parametric Design Language">ANSYS Parametric Design Language</option>
+		<option value="APL">APL</option>
+		<option value="App Inventor">App Inventor</option>
+		<option value="Applied Type System">Applied Type System</option>
+		<option value="AppleScript">AppleScript</option>
+		<option value="Arden-Syntax">Arden-Syntax</option>
+		<option value="ARLA">ARLA</option>
+		<option value="ASIC">ASIC</option>
+		<option value="Atlas Transformation Language">Atlas Transformation Language</option>
+		<option value="Autocoder">Autocoder</option>
+		<option value="AutoHotkey">AutoHotkey</option>
+		<option value="AutoIt">AutoIt</option>
+		<option value="AutoLISP">AutoLISP</option>
+		<option value="Automatically Programmed Tools (APT)">Automatically Programmed Tools (APT)</option>
+		<option value="awk (awk, gawk, mawk, nawk)">awk (awk, gawk, mawk, nawk)</option>
+		<option value="B-0">B-0</option>
+		<option value="BANCStar">BANCStar</option>
+		<option value="BASIC, siehe auch Liste der BASIC-Dialekte">BASIC, siehe auch Liste der BASIC-Dialekte</option>
+		<option value="Basic Calculator">Basic Calculator</option>
+		<option value="Batch">Batch</option>
+		<option value="Bash">Bash</option>
+		<option value="Basic Combined Programming Language (BCPL)">Basic Combined Programming Language (BCPL)</option>
+		<option value="BeanShell">BeanShell</option>
+		<option value="Befunge">Befunge</option>
+		<option value="Beta (Programmiersprache)">Beta (Programmiersprache)</option>
+		<option value="BLISS (Programmiersprache)">BLISS (Programmiersprache)</option>
+		<option value="Blitz Basic">Blitz Basic</option>
+		<option value="Boo">Boo</option>
+		<option value="Brainfuck, Brainfuck2D">Brainfuck, Brainfuck2D</option>
+		<option value="C++">C++</option>
+		<option value="C--">C--</option>
+		<option value="C#">C#</option>
+		<option value="C/AL">C/AL</option>
+		<option value="Caml, siehe Objective CAML">Caml, siehe Objective CAML</option>
+		<option value="Ceylon">Ceylon</option>
+		<option value="C for graphics">C for graphics</option>
+		<option value="Chef">Chef</option>
+		<option value="CHILL">CHILL</option>
+		<option value="ChucK (Programmiersprache)">ChucK (Programmiersprache)</option>
+		<option value="CL">CL</option>
+		<option value="Clarion">Clarion</option>
+		<option value="Clean">Clean</option>
+		<option value="Clipper">Clipper</option>
+		<option value="CLIPS">CLIPS</option>
+		<option value="CLIST">CLIST</option>
+		<option value="Clojure">Clojure</option>
+		<option value="CLU">CLU</option>
+		<option value="Cluster">Cluster</option>
+		<option value="Co-array Fortran">Co-array Fortran</option>
+		<option value="COBOL">COBOL</option>
+		<option value="Cobra">Cobra</option>
+		<option value="CoffeeScript">CoffeeScript</option>
+		<option value="COMAL">COMAL</option>
+		<option value="Cω">Cω</option>
+		<option value="COMIT">COMIT</option>
+		<option value="Common Lisp">Common Lisp</option>
+		<option value="Component Pascal">Component Pascal</option>
+		<option value="Comskee">Comskee</option>
+		<option value="CONZEPT 16">CONZEPT 16</option>
+		<option value="CPL">CPL</option>
+		<option value="CURL">CURL</option>
+		<option value="Curry">Curry</option>
+		<option value="CycL">CycL</option>
+		<option value="Cython">Cython</option>
+		<option value="DarkBASIC">DarkBASIC</option>
+		<option value="Dart">Dart</option>
+		<option value="Datalog">Datalog</option>
+		<option value="Delphi (Object Pascal)">Delphi (Object Pascal)</option>
+		<option value="Digital Command Language (DCL)">Digital Command Language (DCL)</option>
+		<option value="Dylan">Dylan</option>
+		<option value="Easytrieve">Easytrieve</option>
+		<option value="Eiffel">Eiffel</option>
+		<option value="ELAN">ELAN</option>
+		<option value="Elixir">Elixir</option>
+		<option value="Elm">Elm</option>
+		<option value="Emacs Lisp">Emacs Lisp</option>
+		<option value="Enterprise Generation Language (EGL)">Enterprise Generation Language (EGL)</option>
+		<option value="Erlang">Erlang</option>
+		<option value="ESPOL">ESPOL</option>
+		<option value="Esterel">Esterel</option>
+		<option value="Euler">Euler</option>
+		<option value="Euphoria">Euphoria</option>
+		<option value="EXAPT">EXAPT</option>
+		<option value="F (Variante von Fortran)">F (Variante von Fortran)</option>
+		<option value="F#">F#</option>
+		<option value="Factor">Factor</option>
+		<option value="Faust">Faust</option>
+		<option value="FileMaker Script">FileMaker Script</option>
+		<option value="FlagShip">FlagShip</option>
+		<option value="FLOW-MATIC">FLOW-MATIC</option>
+		<option value="FOCAL (HP-41)">FOCAL (HP-41)</option>
+		<option value="Forth">Forth</option>
+		<option value="Fortran">Fortran</option>
+		<option value="Fortress">Fortress</option>
+		<option value="FRACTRAN">FRACTRAN</option>
+		<option value="FreeBASIC">FreeBASIC</option>
+		<option value="FreeMat">FreeMat</option>
+		<option value="Gambas">Gambas</option>
+		<option value="Game Maker Language (GML), siehe Game Maker">Game Maker Language (GML), siehe Game Maker</option>
+		<option value="Gauss">Gauss</option>
+		<option value="Generative Modelling Language (GML)">Generative Modelling Language (GML)</option>
+		<option value="GFA-BASIC">GFA-BASIC</option>
+		<option value="Go">Go</option>
+		<option value="Gofer">Gofer</option>
+		<option value="GPSS (General Purpose Simulation System)">GPSS (General Purpose Simulation System)</option>
+		<option value="GrGen.NET">GrGen.NET</option>
+		<option value="Grape">Grape</option>
+		<option value="Groovy">Groovy</option>
+		<option value="Hack">Hack</option>
+		<option value="HAL">HAL</option>
+		<option value="Haskell">Haskell</option>
+		<option value="Haxe">Haxe</option>
+		<option value="High Level Shading Language (HLSL)">High Level Shading Language (HLSL)</option>
+		<option value="Hollywood">Hollywood</option>
+		<option value="HQ9+">HQ9+</option>
+		<option value="iCon-L">iCon-L</option>
+		<option value="Industrial Robot Language (IRL)">Industrial Robot Language (IRL)</option>
+		<option value="Inform">Inform</option>
+		<option value="Interactive Data Language (IDL)">Interactive Data Language (IDL)</option>
+		<option value="INTERCAL">INTERCAL</option>
+		<option value="Io">Io</option>
+		<option value="ISWIM">ISWIM</option>
+		<option value="J#">J#</option>
+		<option value="Jasmin">Jasmin</option>
+		<option value="Java">Java</option>
+		<option value="JavaScript (JScript, ECMAScript, DHTML)">JavaScript (JScript, ECMAScript, DHTML)</option>
+		<option value="Job Control Language (JCL)">Job Control Language (JCL)</option>
+		<option value="JOVIAL">JOVIAL</option>
+		<option value="Joy">Joy</option>
+		<option value="JScript">JScript</option>
+		<option value="JScript .NET">JScript .NET</option>
+		<option value="Julia">Julia</option>
+		<option value="Jython (JPython)">Jython (JPython)</option>
+		<option value="KiXtart">KiXtart</option>
+		<option value="Kornshell">Kornshell</option>
+		<option value="Kotlin">Kotlin</option>
+		<option value="LabVIEW">LabVIEW</option>
+		<option value="Liberty Basic">Liberty Basic</option>
+		<option value="Lingo">Lingo</option>
+		<option value="Limbo">Limbo</option>
+		<option value="Linda">Linda</option>
+		<option value="Linden Scripting Language (LSL)">Linden Scripting Language (LSL)</option>
+		<option value="Linear Programming Language (LPL)">Linear Programming Language (LPL)</option>
+		<option value="Lisp">Lisp</option>
+		<option value="Logo">Logo</option>
+		<option value="LPC">LPC</option>
+		<option value="Lua">Lua</option>
+		<option value="Luna">Luna</option>
+		<option value="Lustre">Lustre</option>
+		<option value="Lite-C">Lite-C</option>
+		<option value="M4">M4</option>
+		<option value="Malbolge">Malbolge</option>
+		<option value="Maple">Maple</option>
+		<option value="Mathematica">Mathematica</option>
+		<option value="Matlab">Matlab</option>
+		<option value="Max/MSP">Max/MSP</option>
+		<option value="MDL">MDL</option>
+		<option value="Mercury">Mercury</option>
+		<option value="Mesa">Mesa</option>
+		<option value="Miranda">Miranda</option>
+		<option value="MIXAL">MIXAL</option>
+		<option value="ML">ML</option>
+		<option value="Modula (Modula-2, Modula-2+, Modula-3)">Modula (Modula-2, Modula-2+, Modula-3)</option>
+		<option value="Monkey X">Monkey X</option>
+		<option value="MPD">MPD</option>
+		<option value="MUMPS">MUMPS</option>
+		<option value="Nasal">Nasal</option>
+		<option value="NATURAL">NATURAL</option>
+		<option value="NetLogo">NetLogo</option>
+		<option value="NeWS">NeWS</option>
+		<option value="Newsqueak">Newsqueak</option>
+		<option value="NewtonScript">NewtonScript</option>
+		<option value="NewLISP">NewLISP</option>
+		<option value="Nice">Nice</option>
+		<option value="Not Quite C (NQC)">Not Quite C (NQC)</option>
+		<option value="Not eXactly C (NXC)">Not eXactly C (NXC)</option>
+		<option value="Nyquist">Nyquist</option>
+		<option value="Oberon">Oberon</option>
+		<option value="Objective-C">Objective-C</option>
+		<option value="Objective-C++">Objective-C++</option>
+		<option value="OCaml">OCaml</option>
+		<option value="Object Pascal (Delphi)">Object Pascal (Delphi)</option>
+		<option value="Occam">Occam</option>
+		<option value="Octave">Octave</option>
+		<option value="Opal">Opal</option>
+		<option value="OPL">OPL</option>
+		<option value="OpenGL ES Shading Language">OpenGL ES Shading Language</option>
+		<option value="OpenGL Shading Language">OpenGL Shading Language</option>
+		<option value="Ook!">Ook!</option>
+		<option value="Oz">Oz</option>
+		<option value="Pacbase">Pacbase</option>
+		<option value="Pascal">Pascal</option>
+		<option value="PEARL">PEARL</option>
+		<option value="Perl">Perl</option>
+		<option value="Phalanger">Phalanger</option>
+		<option value="Pharo">Pharo</option>
+		<option value="PHP">PHP</option>
+		<option value="Piet">Piet</option>
+		<option value="Pike">Pike</option>
+		<option value="PILOT">PILOT</option>
+		<option value="PL/0">PL/0</option>
+		<option value="PL/I">PL/I</option>
+		<option value="PL/M">PL/M</option>
+		<option value="PL/S">PL/S</option>
+		<option value="PL/SQL">PL/SQL</option>
+		<option value="Plankalkül">Plankalkül</option>
+		<option value="Posity">Posity</option>
+		<option value="PostScript">PostScript</option>
+		<option value="POW!">POW!</option>
+		<option value="PowerScript">PowerScript</option>
+		<option value="PowerShell">PowerShell</option>
+		<option value="Processing">Processing</option>
+		<option value="Progres">Progres</option>
+		<option value="Prolog (Arity Prolog, Turbo Prolog, Sicstus, CLP, CLPR)">Prolog (Arity Prolog, Turbo Prolog, Sicstus, CLP, CLPR)</option>
+		<option value="PROSA">PROSA</option>
+		<option value="Puck">Puck</option>
+		<option value="PureBasic">PureBasic</option>
+		<option value="Pure Data">Pure Data</option>
+		<option value="Python">Python</option>
+		<option value="QuakeC">QuakeC</option>
+		<option value="QML">QML</option>
+		<option value="Racket">Racket</option>
+		<option value="REBOL">REBOL</option>
+		<option value="REXX">REXX</option>
+		<option value="Robot Karol">Robot Karol</option>
+		<option value="RPG">RPG</option>
+		<option value="Ruby">Ruby</option>
+		<option value="Rust">Rust</option>
+		<option value="S-Lang">S-Lang</option>
+		<option value="SabreTalk">SabreTalk</option>
+		<option value="SAIL (Stanford AI Language)">SAIL (Stanford AI Language)</option>
+		<option value="SassScript">SassScript</option>
+		<option value="Sather">Sather</option>
+		<option value="Scala">Scala</option>
+		<option value="Scilab">Scilab</option>
+		<option value="Scheme">Scheme</option>
+		<option value="Strukturierter Text (SCL)">Strukturierter Text (SCL)</option>
+		<option value="Scratch">Scratch</option>
+		<option value="Script.NET">Script.NET</option>
+		<option value="Server Side Includes (SSI)">Server Side Includes (SSI)</option>
+		<option value="Seed7">Seed7</option>
+		<option value="Self">Self</option>
+		<option value="SETL">SETL</option>
+		<option value="Shakespeare">Shakespeare</option>
+		<option value="Shell (sh, ksh, bash, csh, zsh)">Shell (sh, ksh, bash, csh, zsh)</option>
+		<option value="Simula">Simula</option>
+		<option value="Simulink">Simulink</option>
+		<option value="Sing#">Sing#</option>
+		<option value="Slate">Slate</option>
+		<option value="Sleep">Sleep</option>
+		<option value="Smalltalk">Smalltalk</option>
+		<option value="Snap! (BYOB)">Snap! (BYOB)</option>
+		<option value="SNOBOL4">SNOBOL4</option>
+		<option value="Solidity">Solidity</option>
+		<option value="Spec#">Spec#</option>
+		<option value="Specification and Description Language (SDL)">Specification and Description Language (SDL)</option>
+		<option value="Squeak">Squeak</option>
+		<option value="Squirrel">Squirrel</option>
+		<option value="SR">SR</option>
+		<option value="Standard ML (SML)">Standard ML (SML)</option>
+		<option value="StatPascal">StatPascal</option>
+		<option value="StepTalk">StepTalk</option>
+		<option value="STOS BASIC">STOS BASIC</option>
+		<option value="Strongtalk">Strongtalk</option>
+		<option value="StarOffice Basic (auch bekannt als StarBasic und OOoBasic)">StarOffice Basic (auch bekannt als StarBasic und OOoBasic)</option>
+		<option value="Swift">Swift</option>
+		<option value="SuperCollider">SuperCollider</option>
+		<option value="System Management Language (SML)">System Management Language (SML)</option>
+		<option value="TACL">TACL</option>
+		<option value="TAL (Transaction Application Language)">TAL (Transaction Application Language)</option>
+		<option value="Tcl">Tcl</option>
+		<option value="TECO">TECO</option>
+		<option value="TELON (auch CA-Telon)">TELON (auch CA-Telon)</option>
+		<option value="TI-Basic">TI-Basic</option>
+		<option value="Timing Definition Language (TDL)">Timing Definition Language (TDL)</option>
+		<option value="Transact-SQL">Transact-SQL</option>
+		<option value="TTCN">TTCN</option>
+		<option value="TTCN-3">TTCN-3</option>
+		<option value="Turing">Turing</option>
+		<option value="TypeScript">TypeScript</option>
+		<option value="UnrealScript">UnrealScript</option>
+		<option value="Vala">Vala</option>
+		<option value="VEE">VEE</option>
+		<option value="Visual Basic Classic (VB)">Visual Basic Classic (VB)</option>
+		<option value="Visual Basic .NET (VB.NET)">Visual Basic .NET (VB.NET)</option>
+		<option value="Visual Basic for Applications (VBA)">Visual Basic for Applications (VBA)</option>
+		<option value="Visual Basic Script (VBScript)">Visual Basic Script (VBScript)</option>
+		<option value="Visual FoxPro">Visual FoxPro</option>
+		<option value="Visual J++">Visual J++</option>
+		<option value="Visual Objects (VO)">Visual Objects (VO)</option>
+		<option value="Vienna Definition Language (VDL)">Vienna Definition Language (VDL)</option>
+		<option value="VisSim">VisSim</option>
+		<option value="Vulcan.NET">Vulcan.NET</option>
+		<option value="vvvv">vvvv</option>
+		<option value="Web">Web</option>
+		<option value="Web Language">Web Language</option>
+		<option value="Whitespace">Whitespace</option>
+		<option value="WinDev">WinDev</option>
+		<option value="WordBasic">WordBasic</option>
+		<option value="WMLScript">WMLScript</option>
+		<option value="Wyvern">Wyvern</option>
+		<option value="X10">X10</option>
+		<option value="Xbase++">Xbase++</option>
+		<option value="XL">XL</option>
+		<option value="XL (XML-Programmiersprache)">XL (XML-Programmiersprache)</option>
+		<option value="Xojo">Xojo</option>
+		<option value="XProfan">XProfan</option>
+		<option value="XSL Transformation (XSLT)">XSL Transformation (XSLT)</option>
+		<option value="Xtend">Xtend</option>
+	</select>
+ 
+	<hr>
+
+	<input type="color" id="input-color" />
+	<input type="date" id="input-date" />
+	<input type="datetime" id="input-datetime" />
+	<input type="email" id="input-email" />
+	<input type="month" id="input-month" />
+	<input type="number" id="input-number" />
+	<input type="range" id="input-range" min="0" max="255" />
+	<input type="search" id="input-search" />
+	<input type="tel" id="input-tel" />
+	<input type="url" id="input-url" />
+	<input type="week" id="input-week" />
+
+	<form>
+		<p>Please choose your favourite payment:</p>
+		<fieldset>
+			<input type="radio" id="mc" name="paymentmethode" value="Mastercard">
+			<label for="mc"> Mastercard</label><br> 
+			<input type="radio" id="vi" name="paymentmethode" value="Visa">
+			<label for="vi"> Visa</label><br> 
+			<input type="radio" id="ae" name="paymentmethode" value="AmericanExpress">
+			<label for="ae"> American Express</label> 
+		</fieldset>
+	</form>
+	
+	<textarea></textarea>
+
+	<input type="checkbox" id="cbox1" value="second_checkbox" checked="checked">
+  	<label for="cbox1">This is a checkbox</label>
+	<input type="checkbox" id="cbox2" value="second_checkbox" checked="checked">
+  	<label for="cbox2">This is the second checkbox</label>
+</body>
+</html>
