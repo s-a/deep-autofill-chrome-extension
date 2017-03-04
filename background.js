@@ -2,16 +2,19 @@ var currentSetupKey = null;
 var currentTabId = null;
 var core = { 
   "getOptions": function(){
-    console.log('getOptions', localStorage);
-    var result = JSON.parse(localStorage.settings);
-    result = result[currentSetupKey];
+    var result;
+    try{
+      result = JSON.parse(localStorage.settings);
+      result = result[currentSetupKey];
+    } catch(e){
+      result = null;
+    }
     return result;
   },
 }
  
 
 function fill(info,tab) {
-  chrome.extension.getBackgroundPage().console.log(tab.url, info.pageUrl); 
   chrome.tabs.executeScript(null, { file: "jquery-1.8.2.min.js" }, function() {
     chrome.tabs.executeScript(null, { file: "faker.js" }, function() {
         chrome.tabs.executeScript(null, { file: "run.js" }, function () {
