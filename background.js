@@ -1,5 +1,4 @@
 var currentSetupKey = null;
-var currentTabId = null;
 var core = { 
   "getOptions": function(){
     var result;
@@ -20,10 +19,10 @@ function fill(info,tab) {
         chrome.tabs.executeScript(null, { file: "run.js" }, function () {
           chrome.notifications.create(
               'name-for-notification',{   
-              type: 'basic', 
-              iconUrl: 'icon48.png', 
-              title: "OK", 
-              message: "Your formular was filled by a smart but wild monkey!" 
+                type: 'basic', 
+                iconUrl: 'monkey48.png', 
+                title: "OK", 
+                message: "Your HTML form was just filled out by a smart but very wild monkey!" 
               }, 
               function() {}  
             );
@@ -32,8 +31,7 @@ function fill(info,tab) {
   });       
 }
    
-
-window.onload = function(){
+ 
   var settings = (localStorage.settings ? JSON.parse(localStorage.settings) : {});
   var mainContextMenuItem = chrome.contextMenus.create({
     title: "Deep Auto Fill"
@@ -47,7 +45,6 @@ window.onload = function(){
 	        contexts:["page"], 
 	        onclick: function(info, tab){
 	          currentSetupKey = key;
-	          currentTabId = tab.id;
 	          fill(info, tab)
 	        },
 	        parentId: mainContextMenuItem
@@ -66,9 +63,15 @@ window.onload = function(){
     contexts:["page"], 
     onclick: function(info, tab){
       currentSetupKey = null;
-      currentTabId = tab.id;
-      // chrome.tabs.sendMessage(tab.id,{"message":"hide"});
       fill(info, tab)
     } 
   }); 
-}  
+
+
+chrome.browserAction.onClicked.addListener(
+  function(tab) {
+      currentSetupKey = null;
+      // chrome.tabs.sendMessage(tab.id,{"message":"hide"});
+      fill(null, tab)
+  }
+);
