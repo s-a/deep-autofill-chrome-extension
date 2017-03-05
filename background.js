@@ -35,8 +35,6 @@ function fill(info,tab) {
 
 window.onload = function(){
   var settings = (localStorage.settings ? JSON.parse(localStorage.settings) : {});
-
-
   var mainContextMenuItem = chrome.contextMenus.create({
     title: "Deep Auto Fill"
   });
@@ -69,17 +67,8 @@ window.onload = function(){
     onclick: function(info, tab){
       currentSetupKey = null;
       currentTabId = tab.id;
+      // chrome.tabs.sendMessage(tab.id,{"message":"hide"});
       fill(info, tab)
     } 
-  });
- 
-
-} 
-
-// chrome.extension.onRequest.addListener
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
-	if (sender.tab.status !== "loading"){
-    var ret = (core[request.action] || function(){}).apply(this, request.args);
-    sendResponse(ret);
-	}
-}); 
+  }); 
+}  

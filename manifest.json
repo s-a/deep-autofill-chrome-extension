@@ -17,11 +17,11 @@
         "http://*/*",
         "https://*/*"
       ],
-      "js": ["jquery-1.8.2.min.js", "faker.js", "run.js"]
+      "js": ["jquery-1.8.2.min.js", "faker.js"]
     }
   ],
   "options_page": "options.html",
-  "background": { "page": "background.html" },
+  "background": { "page": "background.html", "persistent": true },
 	"permissions": [
     "activeTab",
     "notifications",
