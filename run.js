@@ -111,9 +111,9 @@ chrome.extension.sendRequest({
   "action": "getOptions",
   "args": []
 }, function(response){
-  if (response){
-    for(var i = 0; i < response.fields.length; i++){
-      var field = response.fields[i];
+  if (deepAutofillChromeExtensionSettings){
+    for(var i = 0; i < deepAutofillChromeExtensionSettings.fields.length; i++){
+      var field = deepAutofillChromeExtensionSettings.fields[i];
       var value = faker.lorem.word();
       if (field.static){
         value = field.static;

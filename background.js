@@ -16,17 +16,19 @@ var core = {
 function fill(info,tab) {
   chrome.tabs.executeScript(null, { file: "jquery-1.8.2.min.js" }, function() {
     chrome.tabs.executeScript(null, { file: "faker.js" }, function() {
+      chrome.tabs.executeScript(null, {code: "var deepAutofillChromeExtensionSettings = " + JSON.stringify(core.getOptions()) + ";"}, function(){
         chrome.tabs.executeScript(null, { file: "run.js" }, function () {
           chrome.notifications.create(
-              'name-for-notification',{   
-                type: 'basic', 
-                iconUrl: 'monkey48.png', 
-                title: "OK", 
-                message: "Your HTML form was just filled out by a smart but very wild monkey!" 
-              }, 
-              function() {}  
-            );
+            'name-for-notification',{   
+              type: 'basic', 
+              iconUrl: 'monkey48.png', 
+              title: "OK", 
+              message: "Your HTML form was just filled out by a smart but very wild monkey!" 
+            }, 
+            function() {}  
+          );
         });
+      });
     });       
   });       
 }

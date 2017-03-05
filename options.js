@@ -19,7 +19,7 @@ var demoSettings =  {
         "random": "A bunch of random values: {{name.lastName}}, {{name.firstName}} {{name.suffix}}"
       },
       {
-        "selector" : "name=[textbox1]",
+        "selector" : "input[name=textbox1]",
         "random": "A bunch of another random values: {{internet.email}}, {{helpers.createCard}} {{address.secondaryAddress}}",
         "static" : "A static value"
       },

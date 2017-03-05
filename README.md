@@ -12,11 +12,11 @@ A preset contains an array of setup objects. An example would look like this:
     "randomLocale" : "de",                      // reserver for future use
     "fields" : [                                // array of input elements
       {
-        "selector" : "#textbox2",               //jQuery selector
+        "selector" : "#textbox2",               // a valid jQuery selector. Check your dev tools console to see any errors.
         "random": " {{name.lastName}}, {{name.firstName}} {{name.suffix}}"  // randomized faker values described in some form of template language
       },
       {
-        "selector" : "name=[textbox1]",
+        "selector" : "input[name=textbox1]",
         "static" : "A static value"             // a static string value. Usefull if you always want the same email address.
       },
       {
