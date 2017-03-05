@@ -130,7 +130,7 @@ chrome.extension.sendRequest({
       console.debug(field.selector, value);   
     }
   } else {
-    $("input:enabled, select:enabled, textarea:enabled").each(function(){
+    $("input:enabled, select:enabled, textarea:enabled").not(':button,:hidden').each(function(){
       randomizeInputValue(this);
     }); 
   }
