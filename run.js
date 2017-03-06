@@ -92,16 +92,16 @@ var randomizeInputValue = function(el){
             value = faker.fake("{{" + fakerMethod + "}}")
           }
         }
-        $(el).val(value);
+        $(el).focus().val(value);
         break;
       case "select":
         var opts = $(el)[0].options;
         var idx = randomInt(0, opts.length - 1);
         var val = opts[idx].value;
-        $(el).val(val);
+        $(el).focus().val(val);
         break; 
       case "textarea":
-        $(el).val(faker.lorem.sentences());
+        $(el).focus().val(faker.lorem.sentences());
         break;
     }  
   }
@@ -125,7 +125,7 @@ chrome.extension.sendRequest({
       if (!field.static && !field.random){
         randomizeInputValue($(field.selector));
       } else {
-        $(field.selector).val(value);  
+        $(field.selector).focus().val(value);  
       }
       console.debug(field.selector, value);   
     }
