@@ -37,7 +37,7 @@ This is my first extension for Google Chrome. So the code can be written better 
 
 ## Installation
 
-So far Google wants a creditcard from developers to publish extension in Chrome web store. This is the reason I will not publish this extension there. There is a compressed version of this extension in the [/dist](/dist) folder called `deep-autofill-chrome-extension.crx`.
+Visit [https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk](https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk).
 
 ## Demo
 
