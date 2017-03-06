@@ -17,7 +17,7 @@
 				"http://*/*",
 				"https://*/*"
 			],
-			"js": ["jquery-1.8.2.min.js", "faker.js"]
+			"js": ["jquery-3.1.1.min.js", "faker.js"]
 		}
 	],
 	"options_page": "options.html",
