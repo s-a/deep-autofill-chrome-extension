@@ -112,6 +112,10 @@ chrome.extension.sendRequest({
   "args": []
 }, function(response){
   if (deepAutofillChromeExtensionSettings){
+    if (deepAutofillChromeExtensionSettings.randomLocale){
+      console.info("setting locale", deepAutofillChromeExtensionSettings.randomLocale);
+      faker.locale = deepAutofillChromeExtensionSettings.randomLocale
+    }
     for(var i = 0; i < deepAutofillChromeExtensionSettings.fields.length; i++){
       var field = deepAutofillChromeExtensionSettings.fields[i];
       var value = faker.lorem.word();
