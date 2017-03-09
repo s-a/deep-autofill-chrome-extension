@@ -2,8 +2,6 @@
 
 This extension is using faker.js to fill any enabled input element on HTML forms. You can use a `monkey` random mode or define presets in form of `JSON` data in the extension' s options area.
 
-A preset contains an array of setup objects. An example would look like this:
-
 ## Installation
 
 [![chrome.google.com/webstore](ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk)
@@ -13,6 +11,8 @@ A preset contains an array of setup objects. An example would look like this:
 ![demo](demo.gif)
 
 ## Custom fill settings example
+
+A preset contains an array of setup objects. An example would look like this:
 
 ```javascript
 {
