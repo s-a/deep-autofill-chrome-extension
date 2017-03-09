@@ -4,6 +4,14 @@ This extension is using faker.js to fill any enabled input element on HTML forms
 
 A preset contains an array of setup objects. An example would look like this:
 
+## Installation
+
+[![chrome.google.com/webstore](ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk)
+
+## Demo
+
+![demo](demo.gif)
+
 ## Custom fill settings example
 
 ```javascript
@@ -35,10 +43,8 @@ Each `Array` element will be displayed in the browser` s context menu in form of
 
 This is my first extension for Google Chrome. So the code can be written better for shure. Feedback and pull requests are very welcome.
 
-## Installation
+## License
 
-Visit [https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk](https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk).
+The MIT License (MIT)
 
-## Demo
-
-![demo](demo.gif)
+Copyright (c) 2017 Stephan Ahlf
