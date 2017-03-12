@@ -23,7 +23,7 @@
 	"options_page": "options.html",
 	"background": { "page": "background.html", "persistent": true },
 	"permissions": [
-	 
+	 	"clipboardWrite",
 		"activeTab",
 		"notifications",
 		"contextMenus",
