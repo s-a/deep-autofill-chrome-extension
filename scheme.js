@@ -35,6 +35,26 @@
         }
     };
 
+	$.fn.getPath = function () {
+	    if (this.length != 1) throw 'Requires one element.';
+	    var path, node = this;
+	    if (node[0].id) return "#" + node[0].id;
+	    while (node.length) {
+	        var realNode = node[0],
+	            name = realNode.localName;
+	        if (!name) break;
+	        name = name.toLowerCase();
+	        var parent = node.parent();
+	        var siblings = parent.children(name);
+	        if (siblings.length > 1) {
+	            name += ':eq(' + siblings.index(realNode) + ')';
+	        }
+	        path = name + (path ? '>' + path : '');
+	        node = parent;
+	    }
+	    return path;
+	};
+
 })(window.jQuery);
 
 // Copy provided text to the clipboard.
@@ -55,7 +75,7 @@ chrome.extension.sendRequest({
     console.info(deepAutofillChromeExtensionSettings);
     $("input:enabled, select:enabled, textarea:enabled").not(':button,:hidden,input[type=submit],input[readonly]').each(function(){
         var field = {
-            "selector": $(this).getSelector().join(" "),
+            "selector": $(this).getPath(),
             "random": "A bunch of another random values: {{internet.email}}, {{helpers.createCard}} {{address.secondaryAddress}}",
             "static": "A static value"
         }
