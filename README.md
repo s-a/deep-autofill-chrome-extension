@@ -1,4 +1,6 @@
 # Deep Autofill Chrome Extension
+[![google webstore version](https://img.shields.io/chrome-web-store/v/dcanhnkbelfogjbcifegdkgecfammhnk.svg)](https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk)
+[![google webstore users](https://img.shields.io/chrome-web-store/d/dcanhnkbelfogjbcifegdkgecfammhnk.svg?maxAge=2592000)](https://chrome.google.com/webstore/detail/deep-auto-fill-chrome/dcanhnkbelfogjbcifegdkgecfammhnk)
 
 This extension is using faker.js to fill any enabled input element on HTML forms. You can use a `monkey` random mode or define presets in form of `JSON` data in the extension' s options area.
 
