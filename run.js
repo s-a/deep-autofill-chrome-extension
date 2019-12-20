@@ -94,7 +94,9 @@ var randomizeInputValue = function(el){
             value = faker.fake("{{" + fakerMethod + "}}")
           }
         }
-        $(el).focus().val(value);
+        if (type != 'checkbox' && type != 'radio') {
+          $(el).focus().val(value);
+        }
         break;
       case "select":
         var opts = $(el)[0].options;
